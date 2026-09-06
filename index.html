@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aayush Bodh | AI & ML Student</title>
+<meta name="description" content="Aayush Bodh — BCA student specializing in Artificial Intelligence and Machine Learning.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#eef2ff;background:#070b17;line-height:1.6;overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(99,102,241,.22),transparent 30%),
+    radial-gradient(circle at 85% 25%,rgba(14,165,233,.18),transparent 28%),
+    radial-gradient(circle at 55% 85%,rgba(168,85,247,.14),transparent 32%);
+}
+body:after{
+  content:"";position:fixed;inset:0;z-index:-1;opacity:.18;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:45px 45px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1100px,92%);margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:10;
+  backdrop-filter:blur(18px);background:rgba(7,11,23,.72);
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.2rem;letter-spacing:.4px}
+.logo span{color:#8b5cf6}
+.nav-links{display:flex;gap:25px;color:#b8c1d9;font-size:.92rem}
+.nav-links a:hover{color:white}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.badge{
+  display:inline-flex;padding:8px 14px;border:1px solid rgba(139,92,246,.35);
+  background:rgba(139,92,246,.1);border-radius:999px;color:#c4b5fd;
+  font-size:.85rem;margin-bottom:22px
+}
+h1{font-size:clamp(3.2rem,8vw,6.4rem);line-height:.95;letter-spacing:-4px}
+.gradient{background:linear-gradient(90deg,#fff,#a5b4fc,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:25px 0;color:#aab4cc;max-width:650px;font-size:1.12rem}
+.buttons{display:flex;gap:13px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.12);transition:.25s}
+.btn.primary{background:#7c3aed;border-color:#8b5cf6;box-shadow:0 10px 35px rgba(124,58,237,.25)}
+.btn:hover{transform:translateY(-3px)}
+.visual{
+  width:280px;height:280px;margin:auto;border-radius:50%;
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#8b5cf6,transparent 38%),linear-gradient(145deg,#111827,#172554);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 90px rgba(99,102,241,.28),inset 0 0 50px rgba(255,255,255,.05);
+  animation:float 5s ease-in-out infinite
+}
+.visual-inner{width:205px;height:205px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center}
+.visual span{font-size:4.5rem;font-weight:900}
+@keyframes float{50%{transform:translateY(-14px) rotate(2deg)}}
+section{padding:100px 0}
+.section-title{font-size:2rem;margin-bottom:12px}
+.section-sub{color:#8f9ab4;margin-bottom:35px}
+.about{max-width:800px;color:#b5bfd5;font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  padding:25px;border-radius:18px;background:rgba(15,23,42,.65);
+  border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(10px);
+  transition:.3s
+}
+.card:hover{transform:translateY(-7px);border-color:rgba(139,92,246,.45);box-shadow:0 18px 45px rgba(0,0,0,.2)}
+.card h3{margin:13px 0 8px;font-size:1.15rem}
+.card p{color:#929db7;font-size:.94rem}
+.icon{font-size:1.8rem}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+.tag{font-size:.75rem;padding:5px 9px;border-radius:8px;background:#111a2f;color:#b8c3dc}
+.skills{display:flex;flex-wrap:wrap;gap:12px}
+.skill{padding:10px 15px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(15,23,42,.55);color:#c6cee0}
+.timeline{border-left:1px solid rgba(139,92,246,.35);padding-left:25px}
+.timeline-item{margin-bottom:28px}
+.timeline-item h3{font-size:1.1rem}
+.timeline-item p{color:#929db7}
+.contact-box{
+  text-align:center;padding:55px 25px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(14,165,233,.08));
+  border:1px solid rgba(255,255,255,.1)
+}
+footer{padding:35px 0;color:#69748e;text-align:center;border-top:1px solid rgba(255,255,255,.07)}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero p{margin-left:auto;margin-right:auto}
+  .buttons{justify-content:center}
+  .visual{width:220px;height:220px}
+  .visual-inner{width:160px;height:160px}
+  .visual span{font-size:3.4rem}
+  .cards{grid-template-columns:1fr}
+  h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">Aayush<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">BCA • AI & ML Specialization</div>
+      <h1>Hi, I'm <span class="gradient">Aayush Bodh.</span></h1>
+      <p>I'm a BCA student specializing in Artificial Intelligence and Machine Learning, building strong foundations in programming and web development while exploring AI, GenAI, LLMs and cloud technologies.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View My Projects</a>
+        <a class="btn" href="#contact">Let's Connect</a>
+      </div>
+    </div>
+    <div class="visual"><div class="visual-inner"><span>AB</span></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">A student who enjoys learning by building.</p>
+    <p class="about">I'm Aayush Bodh, a BCA student at APG Shimla University, specializing in AI and Machine Learning, with an expected graduation in 2028. I enjoy turning ideas into practical projects and continuously improving my programming and development skills. My current interests include Artificial Intelligence, Generative AI, LLMs, web technologies and cloud computing.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills & Interests</h2>
+    <p class="section-sub">Technologies and areas I'm learning and working with.</p>
+    <div class="skills">
+      <span class="skill">Java</span><span class="skill">JavaScript</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">React</span><span class="skill">FastAPI</span><span class="skill">Python</span><span class="skill">Google Cloud</span><span class="skill">AI / ML</span><span class="skill">Generative AI</span><span class="skill">LLMs</span><span class="skill">Git & GitHub</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-sub">A few things I've built while learning.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">📚</div><h3>Smart Library System</h3>
+        <p>A digital library project designed to make common library tasks more organized and accessible.</p>
+        <div class="tags"><span class="tag">Web Development</span><span class="tag">Application Logic</span></div>
+      </article>
+      <article class="card">
+        <div class="icon">🎬</div><h3>Movie Night Matcher</h3>
+        <p>A web project that helps users decide what to watch by matching movie preferences for a movie night.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Web Development</span></div>
+      </article>
+      <article class="card">
+        <div class="icon">🧭</div><h3>APG Shimla Campus Navigator</h3>
+        <p>A campus navigation project aimed at helping students and visitors find locations around campus. Currently under development.</p>
+        <div class="tags"><span class="tag">Navigation</span><span class="tag">In Progress</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <p class="section-sub">My academic journey.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>APG Shimla University • Specialization: Artificial Intelligence & Machine Learning</p>
+        <p>Expected Graduation: 2028</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">I'm always open to learning, collaborating and connecting with other developers and students.</p>
+      <div class="buttons" style="justify-content:center">
+        <a class="btn primary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
+        <a class="btn" href="mailto:your-email@example.com">Email Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Aayush Bodh • Built with curiosity & code.</div>
+</footer>
+</body>
+</html>
