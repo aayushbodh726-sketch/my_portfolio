@@ -60,7 +60,9 @@ h1{font-size:clamp(3.2rem,8vw,6.4rem);line-height:.95;letter-spacing:-4px}
   box-shadow:0 0 90px rgba(99,102,241,.28),inset 0 0 50px rgba(255,255,255,.05);
   animation:float 5s ease-in-out infinite
 }
-.visual-inner{width:205px;height:205px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center}
+.visual-inner{width:205px;height:205px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center;overflow:hidden}
+.profile-img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 20%;display:block;transition:transform .5s ease}
+.visual:hover .profile-img{transform:scale(1.08)}
 .visual span{font-size:4.5rem;font-weight:900}
 @keyframes float{50%{transform:translateY(-14px) rotate(2deg)}}
 section{padding:100px 0}
@@ -126,7 +128,7 @@ footer{padding:35px 0;color:#69748e;text-align:center;border-top:1px solid rgba(
         <a class="btn" href="#contact">Let's Connect</a>
       </div>
     </div>
-    <div class="visual"><div class="visual-inner"><span>AB</span></div></div>
+    <div class="visual"><div class="visual-inner"><img src="profile.jpg" alt="Aayush Bodh" class="profile-img"></div></div>
   </div>
 </section>
 
