@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aayush Bodh — Portfolio</title>
-  <meta name="description" content="Portfolio of Aayush Bodh, BCA student specializing in AI & ML at APG Shimla University." />
+  <title>Aayush Bodh — Portfolio & AI/ML Developer</title>
+  <meta name="description" content="Portfolio of Aayush Bodh, BCA student specializing in AI & Machine Learning at APG Shimla University." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -87,6 +87,30 @@
     nav a:hover {
       color: #fff;
     }
+    .btn-blog-badge {
+      color: #c084fc !important;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+    .auth-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .auth-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
     /* Layout Container */
     .container {
       max-width: 1200px;
@@ -94,7 +118,7 @@
       padding: 0 1.5rem;
     }
     section {
-      padding: 6rem 0;
+      padding: 5rem 0;
     }
     
     /* Hero Section */
@@ -175,6 +199,9 @@
       font-weight: 600;
       text-decoration: none;
       transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
     .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.1);
@@ -268,10 +295,11 @@
     }
     .section-subtitle {
       color: var(--text-muted);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       font-size: 1rem;
     }
 
+    /* Tags */
     .post-tag {
       background: rgba(139, 92, 246, 0.15);
       border: 1px solid rgba(139, 92, 246, 0.3);
@@ -280,6 +308,25 @@
       padding: 3px 10px;
       border-radius: 6px;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .post-tag-red {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+    }
+    .post-tag-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+    }
+    .post-tag-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #38bdf8;
     }
 
     /* Grid Layouts */
@@ -305,7 +352,7 @@
       .grid-2 {
         grid-template-columns: 1fr;
       }
-      nav a {
+      nav a:not(.btn-blog-badge) {
         display: none;
       }
       .circle-frame {
@@ -340,10 +387,12 @@
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog" class="btn-blog-badge">⚡ Blog & Discussion</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+      <button class="auth-btn" id="authBtn">Sign In with Google</button>
     </nav>
   </header>
 
@@ -357,10 +406,11 @@
         </div>
         <h1>Hi, I'm <br><span class="gradient-text">Aayush Bodh.</span></h1>
         <p>
-          BCA student specializing in AI & Machine Learning at APG Shimla University (Class of 2028). Building scalable web systems, generative AI projects, and exploring applied deep learning.
+          BCA student specializing in AI & Machine Learning at APG Shimla University (Class of 2028). Building scalable web systems, generative AI projects, and certified in enterprise Linux and cloud infrastructure.
         </p>
         <div class="cta-group">
           <a href="#projects" class="btn-primary">View Projects →</a>
+          <a href="#certifications" class="btn-secondary">Certifications</a>
           <a href="#contact" class="btn-secondary">Let's Connect</a>
         </div>
       </div>
@@ -369,7 +419,7 @@
         <div class="circle-glow"></div>
         <div class="circle-frame">
           <div class="circle-inner">
-            <img src="WhatsApp Image 2026-10-05 at 12.48.32 PM.jpeg" alt="Aayush Bodh" class="circle-img" id="heroAvatar">
+            <img src="profile.jpg" alt="Aayush Bodh" class="circle-img" id="heroAvatar" onerror="this.src='WhatsApp Image 2026-10-05 at 12.48.32 PM.jpeg'">
           </div>
           <div class="circle-badge">🟢 APG Shimla University (2028)</div>
         </div>
@@ -387,7 +437,7 @@
           I'm currently pursuing my Bachelor of Computer Applications (BCA) with an AI & Machine Learning specialization at <strong>APG Shimla University</strong> (graduating in 2028).
         </p>
         <p style="margin-bottom: 1rem;">
-          My passion lies at the intersection of strong core software engineering (Java, Python, relational database design) and modern applied artificial intelligence (LLMs, neural networks, and prompt architectures).
+          My technical focus spans core software engineering (Java, Python, relational databases, Linux operating systems) and applied artificial intelligence (LLMs, neural networks, and generative models).
         </p>
         <p>
           When away from the keyboard, you'll find me snowboarding across Himachal's snowy slopes, hiking, and exploring the outdoors.
@@ -399,11 +449,52 @@
   <!-- Skills Section -->
   <section id="skills" class="container">
     <h2 class="section-title">Technical Skills</h2>
-    <p class="section-subtitle">Core competencies and technologies applied across academic & independent projects.</p>
+    <p class="section-subtitle">Core competencies, verified certifications, and technologies applied across projects.</p>
     
     <div class="grid-2">
+      <!-- Linux & Enterprise Systems -->
+      <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.3);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.75rem;">
+          <h3 style="color:#f87171; font-size: 1.25rem;">🐧 Linux & Systems</h3>
+          <span class="post-tag post-tag-red">Red Hat Certified</span>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
+          Enterprise Linux administration verified via Red Hat Academy (RH104).
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+          <span class="post-tag post-tag-red">Linux</span>
+          <span class="post-tag post-tag-red">Linux Fundamentals</span>
+          <span class="post-tag post-tag-red">Red Hat</span>
+          <span class="post-tag post-tag-red">Red Hat Enterprise Linux</span>
+          <span class="post-tag post-tag-red">RHCSA</span>
+          <span class="post-tag">Bash & Shell Scripting</span>
+          <span class="post-tag">File Permissions & Storage</span>
+        </div>
+      </div>
+
+      <!-- Cloud & Infrastructure -->
+      <div class="glass-card" style="border-color: rgba(245, 158, 11, 0.3);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.75rem;">
+          <h3 style="color:#fbbf24; font-size: 1.25rem;">☁️ Cloud & Architecture</h3>
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.15); color:#fcd34d; border-color:rgba(245, 158, 11, 0.35);">AWS Graduate</span>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
+          Cloud foundations and architectures verified via AWS Academy.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);">AWS Cloud</span>
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);">AWS Architecture</span>
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);">AWS Core Services</span>
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);">AWS Pricing</span>
+          <span class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);">AWS Support</span>
+          <span class="post-tag">Firebase & Firestore</span>
+          <span class="post-tag">SQLite</span>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning -->
       <div class="glass-card">
-        <h3 style="color:#c084fc; margin-bottom: 1rem; font-size: 1.25rem;">🤖 AI & Machine Learning</h3>
+        <h3 style="color:#c084fc; margin-bottom: 0.75rem; font-size: 1.25rem;">🤖 AI & Machine Learning</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Coursework, hands-on model exploration, and generative AI.</p>
         <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
           <span class="post-tag">Machine Learning</span>
@@ -414,8 +505,9 @@
         </div>
       </div>
 
+      <!-- Programming & Web Development -->
       <div class="glass-card">
-        <h3 style="color:#38bdf8; margin-bottom: 1rem; font-size: 1.25rem;">💻 Programming & Web</h3>
+        <h3 style="color:#38bdf8; margin-bottom: 0.75rem; font-size: 1.25rem;">💻 Programming & Web</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Clean architecture and responsive web user interfaces.</p>
         <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
           <span class="post-tag">Java</span>
@@ -429,15 +521,157 @@
     </div>
   </section>
 
+  <!-- Certifications Section -->
+  <section id="certifications" class="container">
+    <h2 class="section-title">Certifications & Credentials</h2>
+    <p class="section-subtitle">Official industry certifications verified on Credly and cloud training academies.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+      
+      <!-- Certification 1: Red Hat RH104 Credly Badge -->
+      <div class="glass-card" style="border: 2px solid rgba(239, 68, 68, 0.35); background: linear-gradient(135deg, rgba(24, 10, 15, 0.9), rgba(10, 15, 28, 0.9));">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+          
+          <div style="text-align: center; padding: 1.5rem; background: rgba(0, 0, 0, 0.45); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08); width: 220px; flex-shrink: 0; margin: 0 auto;">
+            <img src="redhat-rh104.png" alt="Red Hat RH104 Credly Badge" style="width: 130px; height: 130px; object-fit: contain; margin: 0 auto 0.75rem auto; display: block; filter: drop-shadow(0 6px 14px rgba(239, 68, 68, 0.35));" onerror="this.src='https://images.credly.com/images/d52a2d84-70d9-4613-82a4-b6dfe1d5a06c/linkedin_thumb_blob'">
+            <span class="post-tag post-tag-emerald" style="font-size: 0.7rem;">✓ Verified on Credly</span>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Recipient: <strong style="color:#fff;">Aayush Bodh</strong>
+            </p>
+          </div>
+
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display:flex; align-items:center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap:wrap;">
+              <span class="post-tag post-tag-red">Red Hat Academy</span>
+              <span class="post-tag">RH104 - RHA</span>
+              <span class="post-tag">Version 9.1</span>
+            </div>
+
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3;">
+              Red Hat Training: Getting Started with Linux Fundamentals (RH104 - RHA) - Ver. 9.1
+            </h3>
+
+            <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
+              This credential verifies the attendance and completion of the Red Hat Training: Getting Started with Linux Fundamentals (RH104) course through Red Hat Academy. After attending the course, students are recommended to take the Red Hat System Administration I (RH124) course.
+            </p>
+
+            <div style="margin-bottom: 1.25rem;">
+              <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+                Skills Verified by Credly:
+              </p>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.4rem;">
+                <span class="post-tag post-tag-red">Linux</span>
+                <span class="post-tag post-tag-red">Linux Fundamentals</span>
+                <span class="post-tag post-tag-red">Red Hat</span>
+                <span class="post-tag post-tag-red">Red Hat Enterprise Linux</span>
+                <span class="post-tag post-tag-red">RHCSA</span>
+              </div>
+            </div>
+
+            <a href="https://www.credly.com/badges/483857d6-00b6-47b6-b6bb-bd359c9cf011/public_url" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(135deg, #dc2626, #b91c1c); font-size: 0.85rem; padding: 0.6rem 1.25rem;">
+              <span>Verify Official Credly Record ↗</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Certification 2: AWS Academy Graduate -->
+      <div class="glass-card" style="border: 2px solid rgba(245, 158, 11, 0.35); background: linear-gradient(135deg, rgba(24, 18, 10, 0.9), rgba(10, 15, 28, 0.9));">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+          
+          <div style="text-align: center; padding: 1.5rem; background: rgba(0, 0, 0, 0.45); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08); width: 220px; flex-shrink: 0; margin: 0 auto;">
+            <div style="width: 100px; height: 100px; margin: 0 auto 0.75rem auto; background: rgba(245, 158, 11, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 2px solid rgba(245, 158, 11, 0.4);">
+              ☁️
+            </div>
+            <span class="post-tag" style="background:rgba(245, 158, 11, 0.15); color:#fcd34d; border-color:rgba(245, 158, 11, 0.35); font-size: 0.7rem;">
+              Training Badge
+            </span>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Issuer: <strong style="color:#fff;">AWS Academy</strong>
+            </p>
+          </div>
+
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display:flex; align-items:center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap:wrap;">
+              <span class="post-tag" style="background:rgba(245, 158, 11, 0.15); color:#fcd34d; border-color:rgba(245, 158, 11, 0.35);">AWS Training Badge</span>
+              <span class="post-tag">Cloud Foundations</span>
+            </div>
+
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3;">
+              AWS Academy Graduate – Cloud Foundations
+            </h3>
+
+            <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
+              Comprehensive curriculum covering overall AWS cloud architecture, security compliance, compute/storage infrastructure, core services, and cost economics.
+            </p>
+
+            <div style="margin-bottom: 1.25rem;">
+              <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+                Skills Verified:
+              </p>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.4rem;">
+                <a class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);" href="https://www.credly.com/skills/aws-architecture" target="_blank" rel="noopener noreferrer">AWS Architecture</a>
+                <a class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);" href="https://www.credly.com/skills/aws-cloud" target="_blank" rel="noopener noreferrer">AWS Cloud</a>
+                <a class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);" href="https://www.credly.com/skills/aws-core-services" target="_blank" rel="noopener noreferrer">AWS Core Services</a>
+                <a class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);" href="https://www.credly.com/skills/aws-pricing" target="_blank" rel="noopener noreferrer">AWS Pricing</a>
+                <a class="post-tag" style="background:rgba(245, 158, 11, 0.12); color:#fde68a; border-color:rgba(245, 158, 11, 0.3);" href="https://www.credly.com/skills/aws-support" target="_blank" rel="noopener noreferrer">AWS Support</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">Real-world systems built with database integrity and human impact.</p>
+    <h2 class="section-title">Featured Projects & Webapps</h2>
+    <p class="section-subtitle">Real-world systems built with database integrity, interactive 3D, and human impact.</p>
 
+    <!-- Spotlight Project: Stackline — Smart Campus Library System -->
+    <div class="glass-card" style="border: 2px solid rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(12, 19, 34, 0.85), rgba(7, 19, 27, 0.85)); margin-bottom: 2rem;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <div style="display:flex; align-items:center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span class="post-tag post-tag-emerald">⭐ Featured Webapp</span>
+            <span class="post-tag post-tag-cyan">Live Interactive App</span>
+          </div>
+          <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.25rem;">Stackline — Smart Campus Library System</h3>
+          <p style="color: #34d399; font-weight: 600; font-size: 0.95rem;">Interactive Campus Library Management & 3D Bookshelf Catalog</p>
+        </div>
+        <div style="display:flex; gap: 0.75rem; flex-wrap:wrap;">
+          <a href="smart-library.html" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #059669, #0d9488); font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+            ▶ Launch Live Demo
+          </a>
+          <a href="https://github.com/aayushbodh726-sketch/smart-libaray-system.git" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+            GitHub Repo ↗
+          </a>
+        </div>
+      </div>
+
+      <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+        An interactive campus library management and visual bookshelf catalog system. Features realistic 3D book spines with gold foil stamping and subject color-coding, circulation desk ledger operations (checkout, check-in, overdue alerts, fine calculations), interactive multi-level campus library floor maps with beacon wayfinding, Dewey / Library of Congress card cataloging with CSV export, and optical barcode detection with thermal checkout slips.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap: 0.5rem; padding-top: 1rem; border-top: 1px solid var(--card-border);">
+        <span class="post-tag">React 19</span>
+        <span class="post-tag">TypeScript</span>
+        <span class="post-tag">3D Interactive Stacks</span>
+        <span class="post-tag">Circulation Engine</span>
+        <span class="post-tag">Campus Floor Plan</span>
+        <span class="post-tag">Dewey Decimal</span>
+        <span class="post-tag">Barcode Scanner</span>
+      </div>
+    </div>
+
+    <!-- Secondary Project Cards Grid -->
     <div class="grid-2">
       <div class="glass-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
-          <h3 style="font-size: 1.4rem; color: #fff;">Blood Donation Platform</h3>
+          <h3 style="font-size: 1.4rem; color: #fff;">Dev of BLOODY MARY</h3>
           <span class="post-tag" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border-color: rgba(244, 63, 94, 0.3);">Healthcare</span>
         </div>
         <p style="color:#38bdf8; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Emergency Blood Donation Portal</p>
@@ -448,68 +682,24 @@
           <span class="post-tag">PHP</span>
           <span class="post-tag">SQLite</span>
           <span class="post-tag">Emergency Lookups</span>
-        </div> <br><br>
-         <a href="https://github.com/aayushbodh726-sketch/Dev-of-blood-donation.git" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-            GitHub Repo ↗
-          </a>
+        </div>
       </div>
 
       <div class="glass-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
-          <h3 style="font-size: 1.4rem; color: #fff;">Responsive AI Portfolio</h3>
-          <span class="post-tag">Personal Website</span>
+          <h3 style="font-size: 1.4rem; color: #fff;">Dynamic AI Portfolio & Blog</h3>
+          <span class="post-tag">Live System</span>
         </div>
-        <p style="color:#c084fc; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Portfolio Website</p>
+        <p style="color:#c084fc; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Interactive Developer Hub & Comments</p>
         <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.25rem;">
-          A responsive personal website highlighting projects, technical skills, education, and contact information.
+          Full-stack portfolio featuring a dynamic real-time comment and post publishing engine powered by Google Cloud Firestore and Firebase Auth.
         </p>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-          <span class="post-tag">HTML</span>
-          <span class="post-tag">CSS</span>
-          <span class="post-tag">JavaScript</span>
+          <span class="post-tag">Firebase</span>
+          <span class="post-tag">Firestore</span>
+          <span class="post-tag">OAuth</span>
         </div>
       </div>
-    </div>
-  </section> 
-  
-   <br><br> <!-- Spotlight Project: Stackline — Smart Campus Library System -->
-    <div class="glass-card" style="border: 2px solid rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(12, 19, 34, 0.85), rgba(7, 19, 27, 0.85)); margin-bottom: 2rem;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 1rem; margin-bottom: 1rem;margin-left:1.5rem;">
-        <div>
-          <div style="display:flex; align-items:center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span class="post-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.35);">⭐ Featured Webapp</span>
-            <span class="post-tag" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Live Interactive App</span>
-          </div>
-          <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.25rem;">Stackline — Smart Campus Library System</h3>
-          <p style="color: #34d399; font-weight: 600; font-size: 0.95rem;">Interactive Campus Library Management & 3D Bookshelf Catalog</p>
-        </div>
-          <a href="https://github.com/aayushbodh726-sketch/smart-libaray-system.git" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-            GitHub Repo ↗
-          </a>
-        </div>
-      </div>
-
-      <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;margin-left:1.5rem;">
-        An interactive campus library management and visual bookshelf catalog system. Features realistic 3D book spines with gold foil stamping and subject color-coding, circulation desk ledger operations (checkout, check-in, overdue alerts, fine calculations), interactive multi-level campus library floor maps with beacon wayfinding, Dewey / Library of Congress card cataloging with CSV export, and optical barcode detection with thermal checkout slips.
-      </p>
-   
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="container">
-    <h2 class="section-title">Certifications</h2>
-    <p class="section-subtitle">Cloud training and credentials.</p>
-    <div class="glass-card">
-      <span class="post-tag">Training Badge</span>
-      <h3 style="font-size: 1.4rem; margin-top: 0.75rem; color: #fff;">AWS Academy Graduate - Cloud Foundations</h3>
-      <p style="color: var(--text-muted); margin-top: 0.5rem;">AWS Academy</p>
-      <h4 style="color: #fff; margin: 1.25rem 0 0.75rem;">Skills</h4>
-      <ul style="display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none;">
-        <li><a class="post-tag" href="https://www.credly.com/skills/aws-architecture" target="_blank" rel="noopener noreferrer">AWS Architecture</a></li>
-        <li><a class="post-tag" href="https://www.credly.com/skills/aws-cloud" target="_blank" rel="noopener noreferrer">AWS Cloud</a></li>
-        <li><a class="post-tag" href="https://www.credly.com/skills/aws-core-services" target="_blank" rel="noopener noreferrer">AWS Core Services</a></li>
-        <li><a class="post-tag" href="https://www.credly.com/skills/aws-pricing" target="_blank" rel="noopener noreferrer">AWS Pricing</a></li>
-        <li><a class="post-tag" href="https://www.credly.com/skills/aws-support" target="_blank" rel="noopener noreferrer">AWS Support</a></li>
-      </ul>
     </div>
   </section>
 
@@ -536,8 +726,8 @@
       </p>
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
         <a href="mailto:aayushbodh726@gmail.com" class="btn-primary">Email: aayushbodh726@gmail.com</a>
-        <a href="https://www.linkedin.com/in/aayush-bodh-7a6aa7399/" target="_blank" class="btn-secondary">LinkedIn</a>
-        <a href="https://github.com/aayushbodh726-sketch" target="_blank" class="btn-secondary">GitHub</a>
+        <a href="https://www.linkedin.com/in/aayush-bodh-7a6aa7399/" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+        <a href="https://github.com/aayushbodh726-sketch" target="_blank" class="btn-secondary">GitHub ↗</a>
       </div>
     </div>
   </section>
